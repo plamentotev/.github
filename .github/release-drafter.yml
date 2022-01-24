@@ -35,7 +35,9 @@ categories:
       - developer 
   # Default label used by Dependabot
   - title: 📦 Dependency updates
-    label: dependencies
+    label: 
+      - dependencies
+      - dependency-upgrade
   - title: 📝 Documentation updates
     label: documentation
   - title: 👻 Maintenance
