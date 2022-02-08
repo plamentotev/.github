@@ -49,6 +49,12 @@ on:
         required: false
         default: '[ "temurin", "adopt" ]'
         type: string
+        
+      jdk-fast-fail-build:
+        description: "jdk fast fail build"
+        required: false
+        default: '8'
+        type: string        
 
 jobs:
 
@@ -63,12 +69,12 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v2.5.0
         with:
-          java-version: 8
+          java-version: ${{ inputs.maven_args }}
           distribution: 'temurin'
           cache: 'maven'
 
       - name: Build with Maven
-        run: mvn ${{ inputs.maven_args }}
+        run: mvn ${{ inputs.jdk-fast-fail-build }}
 
   verify:
     needs: build
