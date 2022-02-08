@@ -47,7 +47,7 @@ on:
       jdk-distribution-matrix:
         description: "jdk distribution matrix"
         required: false
-        default: '[ "temurin", "adopt" ]'
+        default: '[ "temurin" ]'
         type: string
         
       jdk-fast-fail-build:
