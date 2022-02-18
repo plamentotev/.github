@@ -45,6 +45,8 @@ categories:
       - chore
       - internal
       - maintenance
+  - title: 🔧 Build
+    label: build           
   - title: 🚦 Tests
     labels: 
       - test
