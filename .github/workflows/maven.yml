@@ -35,7 +35,7 @@ on:
       jdk-matrix:
         description: 'jdk matrix as json array'
         required: false
-        default: '[ "8", "11", "17", "18-ea" ]'
+        default: '[ "8", "11", "17", "18" ]'
         type: string
 
       matrix-exclude:
