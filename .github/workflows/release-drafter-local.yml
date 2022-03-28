@@ -8,5 +8,5 @@ jobs:
   update_release_draft:
     name: Update Release Notes
     uses: codehaus-plexus/.github/.github/workflows/release-drafter.yml@master
-      with:
-        config-name: release-drafter-local.yml
+    with:
+      config-name: release-drafter-local.yml
