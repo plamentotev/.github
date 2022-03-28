@@ -1,11 +1,21 @@
 name: Release Drafter
 on:
   workflow_call:
+    inputs:
+      config-name:
+        description: |
+          The configuration file to be used by Release Drafter.
+          The config should still be located inside `.github` as that is where Release Drafter is looking for it.
+        required: false
+        default: 'release-drafter.yml'
+        type: string
   
 jobs:
   update_release_draft:
     runs-on: ubuntu-latest
     steps:
       - uses: release-drafter/release-drafter@v5.19.0
+        with:
+          config-name: ${{ inputs.config-name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
